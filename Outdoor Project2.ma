@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Outdoor Project2.ma
-//Last modified: Wed, Oct 02, 2024 01:14:51 AM
+//Last modified: Wed, Oct 02, 2024 01:15:20 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "polyDisc" "modelingToolkit" "0.0.0.0";
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "AA61DD70-402E-F51B-7219-9A80D7B2AA6C";
+fileInfo "UUID" "D3990C55-4985-3660-6AF4-08B135C98960";
 createNode transform -s -n "persp";
 	rename -uid "4BF77CD7-49A8-2F82-A91E-6D822E7A7A74";
 	setAttr ".v" no;
@@ -34749,7 +34749,7 @@ createNode polyBevel3 -n "polyBevel7";
 	setAttr ".mvt" 0.0001;
 	setAttr ".sa" 30;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "6B4485FF-41D9-564C-C711-80AD59ED9FD3";
+	rename -uid "23AA7AE9-45B1-59B1-8C4A-41BFA757B87D";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -44.047617297324003 -496.83331359095126 ;
 	setAttr ".tgi[0].vh" -type "double2" 311.91155223159888 205.1666585140762 ;
@@ -34859,6 +34859,9 @@ select -ne :hardwareRenderGlobals;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
 select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+select -ne :modelPanel4ViewSelectedSet1;
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".dsm";
 connectAttr "tree_group_visibility.o" "tree_group.v";
