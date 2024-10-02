@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Outdoor Project2.ma
-//Last modified: Wed, Oct 02, 2024 01:13:00 AM
+//Last modified: Wed, Oct 02, 2024 01:14:51 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "polyDisc" "modelingToolkit" "0.0.0.0";
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "CB706FE3-4518-70D2-44D7-ECB4F5D7387F";
+fileInfo "UUID" "AA61DD70-402E-F51B-7219-9A80D7B2AA6C";
 createNode transform -s -n "persp";
 	rename -uid "4BF77CD7-49A8-2F82-A91E-6D822E7A7A74";
 	setAttr ".v" no;
@@ -2089,7 +2089,7 @@ createNode mesh -n "sidewalk_brickShape" -p "sidewalk_brick";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[16]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 6 "f[5]" "f[7]" "f[9]" "f[13]" "f[22:23]" "f[26:28]";
-	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".pv" -type "double2" 0.5 0.23125187307596207 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 43 ".uvst[0].uvsp[0:42]" -type "float2" 0.38624889 0.98875111
 		 0.375 0.98875111 0.375 0.76124889 0.38624889 0 0.38624889 0.018748134 0.625 0.98875111
@@ -33539,7 +33539,7 @@ createNode mesh -n "bench_metalShape2" -p "bench_metal2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.41017672419548035 0 ;
+	setAttr ".pv" -type "double2" 0.46469375491142273 0.64858609437942505 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 168 ".uvst[0].uvsp[0:167]" -type "float2" 0 0.94029081 0.082554527
 		 0.94029081 0.37538955 0.41069579 0.38473538 0.075285569 0.41017672 0 0.50830758 0.028037403
@@ -33964,7 +33964,7 @@ createNode mesh -n "wood_board2Shape" -p "wood_board2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.25 0.125 ;
+	setAttr ".pv" -type "double2" 0.5 0.23934975266456604 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -34317,8 +34317,8 @@ createNode camera -n "front1Shape" -p "front1";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -n "front2";
 	rename -uid "75D5CFC7-4D30-EE4C-8616-F58CAFC24805";
-	setAttr ".t" -type "double3" -10.695359005611202 7.0613404127165937 3.3457661047567546 ;
-	setAttr ".r" -type "double3" -23.3999999999801 1734.8000000001909 3.7913206472740668e-15 ;
+	setAttr ".t" -type "double3" 0.32681797976136484 3.4761166726282196 9.0142626954338017 ;
+	setAttr ".r" -type "double3" -9.6000000000220282 1797.9999999997231 1.4917937673924518e-16 ;
 	setAttr ".rp" -type "double3" 7.9936057773011271e-15 5.3290705182007514e-15 0 ;
 	setAttr ".rpt" -type "double3" 3.9676807899670849e-16 -1.2229511087659826e-15 2.2445792162174282e-15 ;
 	setAttr ".sp" -type "double3" 0 -8.8817841970012523e-16 0 ;
@@ -34328,7 +34328,7 @@ createNode camera -n "front2Shape" -p "front2";
 	setAttr ".rnd" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 13.688520139949924;
+	setAttr ".coi" 11.100060388095439;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
@@ -34466,7 +34466,7 @@ createNode anisotropic -n "metal_color";
 createNode shadingEngine -n "anisotropic2SG";
 	rename -uid "E15ACCB6-4919-9721-CD06-C3B8E796E3FF";
 	setAttr ".ihi" 0;
-	setAttr -s 6 ".dsm";
+	setAttr -s 7 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo4";
 	rename -uid "DDA450E4-4C79-687A-2808-539E0974F583";
@@ -34482,7 +34482,7 @@ createNode lambert -n "wood_color";
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "6CC79592-4BCF-EE0F-A8CB-8D9A4267BFEC";
 	setAttr ".ihi" 0;
-	setAttr -s 7 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo6";
 	rename -uid "30A0C362-4DC2-EDE6-665B-DE84B9041948";
@@ -34749,7 +34749,7 @@ createNode polyBevel3 -n "polyBevel7";
 	setAttr ".mvt" 0.0001;
 	setAttr ".sa" 30;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "AF6FFFD4-4948-9A69-5CFC-0E8E6495C899";
+	rename -uid "6B4485FF-41D9-564C-C711-80AD59ED9FD3";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -44.047617297324003 -496.83331359095126 ;
 	setAttr ".tgi[0].vh" -type "double2" 311.91155223159888 205.1666585140762 ;
