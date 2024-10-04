@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: outdoor boat.ma
-//Last modified: Fri, Oct 04, 2024 04:32:02 AM
+//Last modified: Fri, Oct 04, 2024 04:38:28 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "C7EAED2B-4585-7F66-5A78-7788E59E3A08";
+fileInfo "UUID" "D19C6C35-494A-EF5A-75EB-9B9F14377BBA";
 createNode transform -s -n "persp";
 	rename -uid "F6BFA365-4CB5-F6DC-4F2E-7A8A334D43D3";
 	setAttr ".v" no;
@@ -49,13 +49,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "3D091269-4D6B-D5D0-9A88-4288E2A0BA8E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -22.589678262778808 12.008467680021994 7.8417726518291282 ;
-	setAttr ".r" -type "double3" -385.1999999833036 10728.399999998137 0 ;
+	setAttr ".t" -type "double3" -25.401449620029162 14.138544610985592 22.12465968989968 ;
+	setAttr ".r" -type "double3" -380.39999998233884 12550.399999999967 0 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "D52FAF5C-4575-F338-5389-44B367EC6BA8";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 25.283230977544598;
+	setAttr ".coi" 34.773877848330585;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
@@ -24598,8 +24598,8 @@ createNode mesh -n "waterShape" -p "water";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "43B3E85F-4AD1-1640-436C-928B3F5B4D0F";
-	setAttr -s 10 ".lnk";
-	setAttr -s 10 ".slnk";
+	setAttr -s 13 ".lnk";
+	setAttr -s 13 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
 	rename -uid "D96B0411-44ED-B1E4-624A-91980DCD2BC5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
@@ -25768,6 +25768,7 @@ createNode lambert -n "lambert3";
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "E22F4372-4F66-195C-0565-CBAFC769431B";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "7D364B07-4D24-649F-5313-3F986D4E1A90";
@@ -25777,7 +25778,7 @@ createNode blinn -n "blinn2";
 createNode shadingEngine -n "blinn2SG";
 	rename -uid "62004D29-4D0E-2FF1-79F0-53A50DA9411F";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo4";
 	rename -uid "ED26C1C9-423F-9AF2-C7EB-01AA595323A5";
@@ -25822,7 +25823,8 @@ createNode oceanShader -n "oceanShader1";
 	setAttr ".env[2].envp" 1;
 	setAttr ".env[2].envc" -type "float3" 0 0.1 0.44999999 ;
 	setAttr ".env[2].envi" 2;
-	setAttr ".scl" 0.63717490434646606;
+	setAttr ".mog" 0.13452914357185364;
+	setAttr ".scl" 1.3539462089538574;
 	setAttr ".os" 1.2017936706542969;
 	setAttr ".wd" 0.80269056558609009;
 	setAttr ".nf" 0.53811657428741455;
@@ -25830,7 +25832,7 @@ createNode oceanShader -n "oceanShader1";
 	setAttr ".wh[0]"  0 0.16 1;
 	setAttr ".wtb[0]"  0 1 1;
 	setAttr -s 2 ".wp[0:1]"  0 0.30000001 1 1 0.5 1;
-	setAttr ".d" 0.028645917773246765;
+	setAttr ".d" -0.044789358973503113;
 createNode shadingEngine -n "oceanShader1SG";
 	rename -uid "46108F94-42B7-E676-3AF2-348B368056F2";
 	setAttr ".ihi" 0;
@@ -25838,12 +25840,39 @@ createNode shadingEngine -n "oceanShader1SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo8";
 	rename -uid "36354C6B-4861-DAD9-56ED-5FBB798BAFCA";
+createNode shadingEngine -n "lambert1SG";
+	rename -uid "3C616070-4FC0-0A96-F466-55BBBFFB72BF";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo9";
+	rename -uid "5FD09893-4932-B9CA-C511-F8BD14563157";
+createNode blinn -n "blinn4";
+	rename -uid "520B958A-49D1-1B87-3957-C4ABFA7F7188";
+	setAttr ".c" -type "float3" 0.24215247 0.24215247 0.24215247 ;
+createNode shadingEngine -n "blinn4SG";
+	rename -uid "64BCAACC-4AE2-02A1-AF8D-22B7168CC6FB";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo10";
+	rename -uid "4BCAC815-4655-BFBD-7F11-8884F66C6125";
+createNode anisotropic -n "anisotropic2";
+	rename -uid "DB81432D-45AD-2F50-715E-E59D5952DF31";
+	setAttr ".c" -type "float3" 1 0.52215266 0.31999999 ;
+	setAttr ".ic" -type "float3" 0.27802691 0.27802691 0.27802691 ;
+createNode shadingEngine -n "anisotropic2SG";
+	rename -uid "B210D814-4DA3-19B9-19B5-F0813B4BF93A";
+	setAttr ".ihi" 0;
+	setAttr -s 7 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo11";
+	rename -uid "311B2E3C-4316-8043-229F-19BE42D9E226";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "B3ECA52B-4D20-7DAE-F9E7-02BC677230A8";
+	rename -uid "68687D36-49C8-2ADE-E3DD-D5BDB54F0CD6";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -101.69647702050551 -679.23067763732774 ;
 	setAttr ".tgi[0].vh" -type "double2" 627.66857336221074 130.21016531386118 ;
-	setAttr -s 16 ".tgi[0].ni";
+	setAttr -s 21 ".tgi[0].ni";
 	setAttr ".tgi[0].ni[0].x" 322.85714721679688;
 	setAttr ".tgi[0].ni[0].y" -135.71427917480469;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
@@ -25854,44 +25883,59 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[2].y" -91.428573608398438;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
 	setAttr ".tgi[0].ni[3].x" 15.714285850524902;
-	setAttr ".tgi[0].ni[3].y" -57.142856597900391;
+	setAttr ".tgi[0].ni[3].y" -91.428573608398438;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" 322.85714721679688;
-	setAttr ".tgi[0].ni[4].y" -95.714286804199219;
+	setAttr ".tgi[0].ni[4].x" 15.714285850524902;
+	setAttr ".tgi[0].ni[4].y" -57.142856597900391;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
 	setAttr ".tgi[0].ni[5].x" 322.85714721679688;
-	setAttr ".tgi[0].ni[5].y" -57.142856597900391;
+	setAttr ".tgi[0].ni[5].y" -95.714286804199219;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" 15.714285850524902;
-	setAttr ".tgi[0].ni[6].y" -132.85714721679688;
+	setAttr ".tgi[0].ni[6].x" 322.85714721679688;
+	setAttr ".tgi[0].ni[6].y" -57.142856597900391;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
 	setAttr ".tgi[0].ni[7].x" 15.714285850524902;
-	setAttr ".tgi[0].ni[7].y" -135.71427917480469;
+	setAttr ".tgi[0].ni[7].y" -132.85714721679688;
 	setAttr ".tgi[0].ni[7].nvs" 1923;
 	setAttr ".tgi[0].ni[8].x" 322.85714721679688;
-	setAttr ".tgi[0].ni[8].y" -135.71427917480469;
+	setAttr ".tgi[0].ni[8].y" -57.142856597900391;
 	setAttr ".tgi[0].ni[8].nvs" 1923;
-	setAttr ".tgi[0].ni[9].x" 320;
-	setAttr ".tgi[0].ni[9].y" -98.571426391601562;
+	setAttr ".tgi[0].ni[9].x" 15.714285850524902;
+	setAttr ".tgi[0].ni[9].y" -57.142856597900391;
 	setAttr ".tgi[0].ni[9].nvs" 1923;
-	setAttr ".tgi[0].ni[10].x" 12.857142448425293;
-	setAttr ".tgi[0].ni[10].y" -98.571426391601562;
+	setAttr ".tgi[0].ni[10].x" 15.714285850524902;
+	setAttr ".tgi[0].ni[10].y" -135.71427917480469;
 	setAttr ".tgi[0].ni[10].nvs" 1923;
-	setAttr ".tgi[0].ni[11].x" 15.714285850524902;
-	setAttr ".tgi[0].ni[11].y" -91.428573608398438;
+	setAttr ".tgi[0].ni[11].x" 322.85714721679688;
+	setAttr ".tgi[0].ni[11].y" -135.71427917480469;
 	setAttr ".tgi[0].ni[11].nvs" 1923;
-	setAttr ".tgi[0].ni[12].x" 322.85714721679688;
-	setAttr ".tgi[0].ni[12].y" -91.428573608398438;
+	setAttr ".tgi[0].ni[12].x" 320;
+	setAttr ".tgi[0].ni[12].y" -98.571426391601562;
 	setAttr ".tgi[0].ni[12].nvs" 1923;
-	setAttr ".tgi[0].ni[13].x" 322.85714721679688;
-	setAttr ".tgi[0].ni[13].y" -91.428573608398438;
+	setAttr ".tgi[0].ni[13].x" 12.857142448425293;
+	setAttr ".tgi[0].ni[13].y" -98.571426391601562;
 	setAttr ".tgi[0].ni[13].nvs" 1923;
-	setAttr ".tgi[0].ni[14].x" 15.714285850524902;
-	setAttr ".tgi[0].ni[14].y" -135.71427917480469;
+	setAttr ".tgi[0].ni[14].x" 325.71429443359375;
+	setAttr ".tgi[0].ni[14].y" -411.42855834960938;
 	setAttr ".tgi[0].ni[14].nvs" 1923;
-	setAttr ".tgi[0].ni[15].x" 322.85714721679688;
-	setAttr ".tgi[0].ni[15].y" -135.71427917480469;
+	setAttr ".tgi[0].ni[15].x" 15.714285850524902;
+	setAttr ".tgi[0].ni[15].y" -91.428573608398438;
 	setAttr ".tgi[0].ni[15].nvs" 1923;
+	setAttr ".tgi[0].ni[16].x" 322.85714721679688;
+	setAttr ".tgi[0].ni[16].y" -91.428573608398438;
+	setAttr ".tgi[0].ni[16].nvs" 1923;
+	setAttr ".tgi[0].ni[17].x" 322.85714721679688;
+	setAttr ".tgi[0].ni[17].y" -91.428573608398438;
+	setAttr ".tgi[0].ni[17].nvs" 1923;
+	setAttr ".tgi[0].ni[18].x" 322.85714721679688;
+	setAttr ".tgi[0].ni[18].y" -91.428573608398438;
+	setAttr ".tgi[0].ni[18].nvs" 1923;
+	setAttr ".tgi[0].ni[19].x" 15.714285850524902;
+	setAttr ".tgi[0].ni[19].y" -135.71427917480469;
+	setAttr ".tgi[0].ni[19].nvs" 1923;
+	setAttr ".tgi[0].ni[20].x" 322.85714721679688;
+	setAttr ".tgi[0].ni[20].y" -135.71427917480469;
+	setAttr ".tgi[0].ni[20].nvs" 1923;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -k on ".ihi";
@@ -25929,7 +25973,7 @@ select -ne :renderPartition;
 	setAttr -k on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 10 ".st";
+	setAttr -s 13 ".st";
 	setAttr -k on ".an";
 	setAttr -k on ".pt";
 select -ne :renderGlobalsList1;
@@ -25942,7 +25986,7 @@ select -ne :defaultShaderList1;
 	setAttr -k on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 13 ".s";
+	setAttr -s 15 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -k on ".ihi";
@@ -25959,7 +26003,7 @@ select -ne :initialShadingGroup;
 	setAttr -k on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 15 ".dsm";
+	setAttr -s 3 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -k on ".an";
 	setAttr -k on ".il";
@@ -26420,6 +26464,9 @@ relationship "link" ":lightLinker1" "blinn3SG.message" ":defaultLightSet.message
 relationship "link" ":lightLinker1" "anisotropic1SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "oceanShader1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "blinn4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "anisotropic2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -26430,6 +26477,9 @@ relationship "shadowLink" ":lightLinker1" "blinn3SG.message" ":defaultLightSet.m
 relationship "shadowLink" ":lightLinker1" "anisotropic1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "oceanShader1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "blinn4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "anisotropic2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
@@ -26492,12 +26542,14 @@ connectAttr "lambert2SG.msg" "materialInfo2.sg";
 connectAttr "lambert2.msg" "materialInfo2.m";
 connectAttr "lambert3.oc" "lambert3SG.ss";
 connectAttr "sea_floorShape.iog" "lambert3SG.dsm" -na;
+connectAttr "boat_seatShape.iog" "lambert3SG.dsm" -na;
 connectAttr "lambert3SG.msg" "materialInfo3.sg";
 connectAttr "lambert3.msg" "materialInfo3.m";
 connectAttr "blinn2.oc" "blinn2SG.ss";
 connectAttr "bumperShape1.iog" "blinn2SG.dsm" -na;
 connectAttr "bumperShape.iog" "blinn2SG.dsm" -na;
 connectAttr "steering_consoleShape.iog" "blinn2SG.dsm" -na;
+connectAttr "antenanteantanatnantnaShape.iog" "blinn2SG.dsm" -na;
 connectAttr "blinn2SG.msg" "materialInfo4.sg";
 connectAttr "blinn2.msg" "materialInfo4.m";
 connectAttr "blinn3.oc" "blinn3SG.ss";
@@ -26525,37 +26577,66 @@ connectAttr "waterShape.iog" "oceanShader1SG.dsm" -na;
 connectAttr "oceanShader1SG.msg" "materialInfo8.sg";
 connectAttr "oceanShader1.msg" "materialInfo8.m";
 connectAttr "oceanShader1.msg" "materialInfo8.t" -na;
+connectAttr ":lambert1.oc" "lambert1SG.ss";
+connectAttr "corner_hut2Shape.iog" "lambert1SG.dsm" -na;
+connectAttr "lambert1SG.msg" "materialInfo9.sg";
+connectAttr ":lambert1.msg" "materialInfo9.m";
+connectAttr "blinn4.oc" "blinn4SG.ss";
+connectAttr "anchor_spotShape.iog" "blinn4SG.dsm" -na;
+connectAttr "anchor_spotShape1.iog" "blinn4SG.dsm" -na;
+connectAttr "blinn4SG.msg" "materialInfo10.sg";
+connectAttr "blinn4.msg" "materialInfo10.m";
+connectAttr "anisotropic2.oc" "anisotropic2SG.ss";
+connectAttr "cleat2Shape.iog" "anisotropic2SG.dsm" -na;
+connectAttr "cleat3Shape.iog" "anisotropic2SG.dsm" -na;
+connectAttr "cleatShape.iog" "anisotropic2SG.dsm" -na;
+connectAttr "cleat1Shape.iog" "anisotropic2SG.dsm" -na;
+connectAttr "tall_style_tiedown2Shape.iog" "anisotropic2SG.dsm" -na;
+connectAttr "tall_style_tiedown1Shape.iog" "anisotropic2SG.dsm" -na;
+connectAttr "tall_style_tiedownShape.iog" "anisotropic2SG.dsm" -na;
+connectAttr "anisotropic2SG.msg" "materialInfo11.sg";
+connectAttr "anisotropic2.msg" "materialInfo11.m";
 connectAttr "lambert4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
 connectAttr "lambert4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "blinn2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "blinn4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "anisotropic1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "blinn2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "oceanShader1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "anisotropic1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "anisotropic1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "oceanShader1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "oceanShader1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "anisotropic1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "lambert3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "oceanShader1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "anisotropic2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
-connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "anisotropic2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "blinn1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "lambert3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "blinn3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr "blinn3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
 		;
-connectAttr "blinn2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+connectAttr "blinn1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
 		;
-connectAttr "lambert2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr "lambert1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
 		;
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+connectAttr "blinn3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+		;
+connectAttr "blinn3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+		;
+connectAttr "blinn2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+		;
+connectAttr "blinn4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+		;
+connectAttr "lambert2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+		;
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
 		;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
@@ -26565,6 +26646,9 @@ connectAttr "blinn3SG.pa" ":renderPartition.st" -na;
 connectAttr "anisotropic1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "oceanShader1SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert1SG.pa" ":renderPartition.st" -na;
+connectAttr "blinn4SG.pa" ":renderPartition.st" -na;
+connectAttr "anisotropic2SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn1.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
@@ -26573,20 +26657,10 @@ connectAttr "blinn3.msg" ":defaultShaderList1.s" -na;
 connectAttr "anisotropic1.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert4.msg" ":defaultShaderList1.s" -na;
 connectAttr "oceanShader1.msg" ":defaultShaderList1.s" -na;
+connectAttr "blinn4.msg" ":defaultShaderList1.s" -na;
+connectAttr "anisotropic2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "anchor_spotShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "anchor_spotShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "poleShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "poleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "tall_style_tiedownShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "tall_style_tiedown1Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "tall_style_tiedown2Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "corner_hut2Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "anchor_spotShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "boat_seatShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "cleatShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "cleat1Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "cleat2Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "cleat3Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "antenanteantanatnantnaShape.iog" ":initialShadingGroup.dsm" -na;
 // End of outdoor boat.ma
