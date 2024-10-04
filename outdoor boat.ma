@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: outdoor boat.ma
-//Last modified: Fri, Oct 04, 2024 02:04:20 AM
+//Last modified: Fri, Oct 04, 2024 02:07:49 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,18 +12,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "2D751DDA-4146-464D-37D9-1DA36802D2B1";
+fileInfo "UUID" "FB9B62A0-49AC-8F9B-C4B0-02829C757810";
 createNode transform -s -n "persp";
 	rename -uid "F6BFA365-4CB5-F6DC-4F2E-7A8A334D43D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.5902140300767873 4.5808547167949527 14.604287026178531 ;
-	setAttr ".r" -type "double3" -11.400000000553515 9351.600000000064 1.0047014404822853e-16 ;
+	setAttr ".t" -type "double3" -7.0069847407007266 4.5756723640122363 -6.8787387828973126 ;
+	setAttr ".r" -type "double3" -14.399999999998595 9586.0000000019827 0 ;
 	setAttr ".rpt" -type "double3" -1.1461826364061147e-17 3.0184378254172946e-17 1.7970528801277021e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1C20E86D-49C5-26F0-6A66-ADBD08D82E46";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 13.612118617549505;
+	setAttr ".coi" 10.261934214338359;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -136,8 +136,9 @@ createNode mesh -n "sea_floorShape" -p "sea_floor";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "gas_can";
 	rename -uid "8E5390FE-4631-F9E8-079B-10A6DBD3EE1D";
-	setAttr ".rp" -type "double3" 1.6254113912582397 2.5429514050483704 2.236871600151062 ;
-	setAttr ".sp" -type "double3" 1.6254113912582397 2.5429514050483704 2.236871600151062 ;
+	setAttr ".t" -type "double3" 0 -0.1103217601776123 0 ;
+	setAttr ".rp" -type "double3" 1.6254113912582397 1.9691743850708008 2.236871600151062 ;
+	setAttr ".sp" -type "double3" 1.6254113912582397 1.9691743850708008 2.236871600151062 ;
 createNode mesh -n "gas_canShape" -p "gas_can";
 	rename -uid "F889FFF2-4A45-80A7-3636-4DBCED9FD2E9";
 	setAttr -k off ".v";
