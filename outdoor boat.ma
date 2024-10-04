@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: outdoor boat.ma
-//Last modified: Fri, Oct 04, 2024 02:07:49 AM
+//Last modified: Fri, Oct 04, 2024 02:08:40 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,18 +12,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "FB9B62A0-49AC-8F9B-C4B0-02829C757810";
+fileInfo "UUID" "A4E24DD9-4DAD-0367-778B-93B903D09628";
 createNode transform -s -n "persp";
 	rename -uid "F6BFA365-4CB5-F6DC-4F2E-7A8A334D43D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -7.0069847407007266 4.5756723640122363 -6.8787387828973126 ;
-	setAttr ".r" -type "double3" -14.399999999998595 9586.0000000019827 0 ;
+	setAttr ".t" -type "double3" -12.821123811809676 11.46461658554529 -13.212601681243694 ;
+	setAttr ".r" -type "double3" -26.999999999925652 9584.4000000021679 0 ;
 	setAttr ".rpt" -type "double3" -1.1461826364061147e-17 3.0184378254172946e-17 1.7970528801277021e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1C20E86D-49C5-26F0-6A66-ADBD08D82E46";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 10.261934214338359;
+	setAttr ".coi" 20.795552966042752;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -6211,11 +6211,6 @@ createNode groupId -n "groupId4";
 createNode groupId -n "groupId5";
 	rename -uid "0FFBEEC8-4E4D-EF74-3E55-69B996E2E99B";
 	setAttr ".ihi" 0;
-createNode timeEditor -s -n "timeEditor";
-	rename -uid "C8EB82D6-4EE6-CD75-3955-E7B2F96BF6F2";
-	setAttr ".ac" 0;
-createNode timeEditorTracks -n "Composition1";
-	rename -uid "E9A34B77-4495-875A-F400-01B68A107DB1";
 createNode groupParts -n "groupParts1";
 	rename -uid "FF5B57D5-4443-B3DD-CEAA-31BC955706F2";
 	setAttr ".ihi" 0;
@@ -6307,7 +6302,6 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
-connectAttr ":timeEditor.cmp[0]" "Composition1.cmp";
 connectAttr "polyUnite1.out" "groupParts1.ig";
 connectAttr "groupId5.id" "groupParts1.gi";
 connectAttr "|boat|boat_main|transform2|boat_mainShape.o" "polyUnite1.ip[0]";
