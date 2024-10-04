@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: outdoor boat.ma
-//Last modified: Fri, Oct 04, 2024 03:45:49 AM
+//Last modified: Fri, Oct 04, 2024 03:53:47 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "15A72AF6-4718-9438-0C34-3E9E05DFDFD3";
+fileInfo "UUID" "CAA6CB7A-4D69-2848-713C-179CAA32D29E";
 createNode transform -s -n "persp";
 	rename -uid "F6BFA365-4CB5-F6DC-4F2E-7A8A334D43D3";
 	setAttr ".v" no;
@@ -49,13 +49,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "3D091269-4D6B-D5D0-9A88-4288E2A0BA8E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.983503061946843 4.4471409878502008 9.5295244525824057 ;
-	setAttr ".r" -type "double3" -12.599999999987306 1758.7999999999731 0 ;
+	setAttr ".t" -type "double3" -15.164305767134048 0.68993795163926297 -0.75729613652982053 ;
+	setAttr ".r" -type "double3" -0.60000000066894787 2783.1999999999562 0 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "D52FAF5C-4575-F338-5389-44B367EC6BA8";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 12.347698929404849;
+	setAttr ".coi" 17.143403032513682;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
@@ -5517,7 +5517,7 @@ createNode mesh -n "boat_main1Shape" -p "boat_main1";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 3 "f[3]" "f[48]" "f[146]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 10 "f[0]" "f[20]" "f[39]" "f[44]" "f[49:52]" "f[54]" "f[62:64]" "f[89]" "f[94:96]" "f[138:145]";
-	setAttr ".pv" -type "double2" 0.375 0.57499998807907104 ;
+	setAttr ".pv" -type "double2" 0.5 0.875 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 193 ".uvst[0].uvsp[0:192]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -5554,6 +5554,43 @@ createNode mesh -n "boat_main1Shape" -p "boat_main1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 36 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[1]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[6]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[7]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[10]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[11]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[14]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[15]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[17]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[18]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[20]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[22]" -type "float3" 0 0.3945024 0 ;
+	setAttr ".pt[23]" -type "float3" 0 0.3945024 0 ;
+	setAttr ".pt[24]" -type "float3" 0 0.3945024 0 ;
+	setAttr ".pt[25]" -type "float3" 0 0.3945024 0 ;
+	setAttr ".pt[27]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[28]" -type "float3" 0 0.3945024 0 ;
+	setAttr ".pt[29]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[41]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[42]" -type "float3" 0 0.3945024 0 ;
+	setAttr ".pt[43]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[47]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[48]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[63]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[64]" -type "float3" 0 0.3945024 0 ;
+	setAttr ".pt[65]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[73]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[74]" -type "float3" 0 0.3945024 0 ;
+	setAttr ".pt[75]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[137]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[138]" -type "float3" 0 0.3945024 0 ;
+	setAttr ".pt[139]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[148]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[150]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[160]" -type "float3" 0 0.39450228 0 ;
+	setAttr ".pt[161]" -type "float3" 0 0.3945024 0 ;
 	setAttr -s 164 ".vt[0:163]"  -3.29965568 0.51700658 3.20308065 -0.33707476 0.51700658 3.20308065
 		 -3.29965568 2.36061382 3.20308065 -0.33707476 2.36061382 3.20308065 -3.43317914 2.36061382 1.59553695
 		 -0.20355177 2.36061382 1.59553695 -3.43317914 0.51700658 1.59553695 -0.20355177 0.51700658 1.59553695
@@ -7474,6 +7511,10 @@ createNode transform -n "pDisc1" -p "ladder";
 	rename -uid "F3D7439E-4261-645C-26CE-FCA1AEFAAFE4";
 	setAttr ".t" -type "double3" -0.2737687375148683 0.043866047870806169 0 ;
 	setAttr -av ".ty";
+	setAttr ".s" -type "double3" 0.87661509686002637 0.58292987071944435 0.87661509686002637 ;
+	setAttr -av ".sx";
+	setAttr -av ".sy";
+	setAttr -av ".sz";
 	setAttr ".rp" -type "double3" -3.4978808164596558 1.0770073384046555 0.15789246559143066 ;
 	setAttr ".rpt" -type "double3" 0.78077180839957561 0.78077134991988739 0 ;
 	setAttr ".sp" -type "double3" -3.4978808164596558 1.0770073384046555 0.15789246559143066 ;
