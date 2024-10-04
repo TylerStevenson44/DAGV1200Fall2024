@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: outdoor boat.ma
-//Last modified: Thu, Oct 03, 2024 11:08:04 PM
+//Last modified: Thu, Oct 03, 2024 11:09:29 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "6D34B048-46AA-A7A6-4686-7C8861D57C12";
+fileInfo "UUID" "81854E85-406F-7F54-2E61-83B910C692A8";
 createNode transform -s -n "persp";
 	rename -uid "F6BFA365-4CB5-F6DC-4F2E-7A8A334D43D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -9.8754732300708401 10.707780993272332 1.1877439595522858 ;
-	setAttr ".r" -type "double3" -32.738352718486937 990.19999999992092 1.8223272990530584e-12 ;
+	setAttr ".t" -type "double3" -0.81072136821164031 8.5174501923074075 11.017117929645847 ;
+	setAttr ".r" -type "double3" -26.738352719237842 1427.0000000001103 -1.6321081673230289e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1C20E86D-49C5-26F0-6A66-ADBD08D82E46";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 13.485425899822635;
+	setAttr ".coi" 11.341282262029594;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -230,14 +230,17 @@ createNode mesh -n "polySurfaceShape1" -p "pCube3";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube4";
 	rename -uid "69212C54-43B0-92F8-F0BB-95A0C7B02E29";
-	setAttr ".t" -type "double3" 2.5332462594662619 2.5393453830595032 -0.47114791530119476 ;
+	setAttr ".t" -type "double3" 2.5332462594662628 2.4691743501505838 -0.47114791530119471 ;
+	setAttr -av ".tx";
+	setAttr -av ".ty";
 	setAttr -av ".tz";
 	setAttr ".s" -type "double3" 1.1717280114361404 1.1717280114361404 1.1717280114361404 ;
 	setAttr -av ".sx";
 	setAttr -av ".sy";
 	setAttr -av ".sz";
-	setAttr ".rp" -type "double3" 0 -0.5 0 ;
-	setAttr ".sp" -type "double3" 0 -0.5 0 ;
+	setAttr ".rp" -type "double3" -5.7586291798911853e-16 -0.49999996507978361 -8.8454578266021806e-17 ;
+	setAttr ".sp" -type "double3" -4.4408920985006262e-16 -0.49999997019767717 -1.1102230246251565e-16 ;
+	setAttr ".spt" -type "double3" -1.3177370813905592e-16 5.1178935533968684e-09 2.2567724196493848e-17 ;
 createNode mesh -n "pCubeShape4" -p "pCube4";
 	rename -uid "38BDEEE7-46FA-F20B-C8CE-BDB956BA6291";
 	setAttr -k off ".v";
@@ -1511,6 +1514,9 @@ createNode mesh -n "pTorusShape3" -p "pTorus3";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube5";
 	rename -uid "DF9FDFB1-4B67-2E40-F663-C599C4531E61";
+	setAttr ".t" -type "double3" 3.9967787265777588 1.9691743850708008 4 ;
+	setAttr ".rp" -type "double3" 0.5 -0.5 0.5 ;
+	setAttr ".sp" -type "double3" 0.5 -0.5 0.5 ;
 createNode mesh -n "pCubeShape5" -p "pCube5";
 	rename -uid "EEB017EE-420D-F678-6D95-9CAB54226C4D";
 	setAttr -k off ".v";
