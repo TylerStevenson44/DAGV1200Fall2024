@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: outdoor boat.ma
-//Last modified: Fri, Oct 04, 2024 01:43:34 AM
+//Last modified: Fri, Oct 04, 2024 01:43:57 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "41B2EFC9-4B89-DA12-CBF5-0FBDCBD3D2C1";
+fileInfo "UUID" "F753F35E-47A9-5A1E-C2A4-7786DAED0508";
 createNode transform -s -n "persp";
 	rename -uid "F6BFA365-4CB5-F6DC-4F2E-7A8A334D43D3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -16.206255041979475 16.904329400445313 -22.535678320023443 ;
-	setAttr ".r" -type "double3" -30.59999999693774 7059.1999999986074 0 ;
+	setAttr ".t" -type "double3" -18.611877919402154 18.617639927800813 -18.727165541951038 ;
+	setAttr ".r" -type "double3" -34.199999996938431 7068.3999999985781 0 ;
 	setAttr ".rpt" -type "double3" -1.1461826364061147e-17 3.0184378254172946e-17 1.7970528801277021e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1C20E86D-49C5-26F0-6A66-ADBD08D82E46";
