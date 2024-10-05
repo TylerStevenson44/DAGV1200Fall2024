@@ -1,9 +1,9 @@
 //Maya ASCII 2025ff03 scene
 //Name: outdoor boat.0001.ma
-//Last modified: Sat, Oct 05, 2024 12:54:41 PM
+//Last modified: Sat, Oct 05, 2024 01:12:38 PM
 //Codeset: 1252
 requires maya "2025ff03";
-requires -nodeType "polyDisc" -nodeType "polySuperShape" "modelingToolkit" "0.0.0.0";
+requires -nodeType "polyDisc" "modelingToolkit" "0.0.0.0";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.2.1";
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "D7D509F3-4D10-DB68-F61F-CABAF2262C96";
+fileInfo "UUID" "53CA3506-42D4-8E00-A8D6-D9A8CF0EA02B";
 createNode transform -s -n "persp";
 	rename -uid "F6BFA365-4CB5-F6DC-4F2E-7A8A334D43D3";
 	setAttr ".v" no;
@@ -52,8 +52,8 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "3D091269-4D6B-D5D0-9A88-4288E2A0BA8E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.2635161115884417 3.3966790275751335 3.2617033145679937 ;
-	setAttr ".r" -type "double3" -11.399999999977481 3673.5999999994524 0 ;
+	setAttr ".t" -type "double3" 5.9072586538018106 3.9273800799382839 1.6981307392468041 ;
+	setAttr ".r" -type "double3" -35.999999999965901 8734.7999999992462 -2.5444437451708134e-14 ;
 	setAttr ".rp" -type "double3" -4.4408920985006262e-15 4.0245584642661925e-14 -1.1368683772161603e-13 ;
 	setAttr ".rpt" -type "double3" -4.1370742231859741e-14 7.1324816165771518e-14 1.1420703571816961e-13 ;
 createNode camera -s -n "frontShape" -p "front";
@@ -61,12 +61,12 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 7.2785815951981485;
+	setAttr ".coi" 3.6395015250179923;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" 0.011980548501014709 3.4798493385314941 1.9626015424728394 ;
+	setAttr ".tp" -type "double3" 2.3035036325454712 1.8891761302947998 2.2153097987174988 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "side";
@@ -48508,78 +48508,6 @@ createNode mesh -n "steering_consoleShape" -p "|detailed_models|boat|steering_co
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "boat_seat" -p "|detailed_models|boat";
-	rename -uid "9F344FF2-4C79-190D-045F-2A8C2887D29E";
-	setAttr ".rp" -type "double3" -2.4939159499077634 1.6901490688323975 2.8271911526272264 ;
-	setAttr ".sp" -type "double3" -2.4939159499077634 1.6901490688323975 2.8271911526272264 ;
-createNode mesh -n "boat_seatShape" -p "|detailed_models|boat|boat_seat";
-	rename -uid "71A6F63A-482A-FA66-0717-458E9171C784";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "f[2]" "f[7:10]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 2 "f[4]" "f[6]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".pv" -type "double2" 0.5 0.625 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 19 ".uvst[0].uvsp[0:18]" -type "float2" 0.375 0 0.375 0.25
-		 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.875 0 0.875 0.25 0.125 0 0.125
-		 0.25 0.625 0 0.875 0 0.875 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.625 0.75 0.375 0.75;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 14 ".pt[0:13]" -type "float3"  -2.3175683 2.1901488 2.6508436 
-		-2.3175683 1.9732628 2.6508436 -2.3535099 1.9732628 3.0035386 -2.6802189 1.9732628 
-		3.0035386 -2.3535099 2.1901488 3.0035386 -2.6802189 2.1901488 3.0035386 -3.0080163 
-		2.1901488 3.0035386 -3.0080163 2.1901488 2.6508436 -3.0080163 1.9732628 3.0035386 
-		-3.0080163 1.9732628 2.6508436 -2.3802371 1.9732628 3.818356 -2.7329326 1.9732628 
-		3.818356 -2.7329326 2.1901488 3.818356 -2.3802371 2.1901488 3.818356;
-	setAttr -s 14 ".vt[0:13]"  -0.5 -0.49999905 0.50000024 -0.5 0.11493972 0.50000024
-		 -0.5 0.11493972 -0.5 0.50000024 0.11493972 -0.5 -0.5 -0.49999905 -0.5 0.50000024 -0.49999905 -0.5
-		 1.45763385 -0.49999905 -0.5 1.45763385 -0.49999905 0.50000024 1.45763385 0.11493972 -0.5
-		 1.45763385 0.11493972 0.50000024 -0.5 0.11493972 -2.36219263 0.50000024 0.11493972 -2.36219263
-		 0.50000024 -0.49999905 -2.36219263 -0.5 -0.49999905 -2.36219263;
-	setAttr -s 23 ".ed[0:22]"  2 3 0 4 5 0 0 1 0 1 2 0 2 4 0 3 5 0 4 0 0
-		 5 6 0 0 7 0 6 7 0 3 8 0 8 6 0 1 9 0 9 8 0 7 9 0 2 10 0 3 11 0 10 11 0 5 12 0 11 12 0
-		 4 13 0 13 12 0 10 13 0;
-	setAttr -s 11 -ch 46 ".fc[0:10]" -type "polyFaces" 
-		f 4 -3 8 14 -13
-		mu 0 4 1 0 11 14
-		f 5 -1 -4 12 13 -11
-		mu 0 5 3 2 1 14 13
-		f 4 17 19 -22 -23
-		mu 0 4 15 16 17 18
-		f 5 -7 1 7 9 -9
-		mu 0 5 6 4 7 12 11
-		f 4 -10 -12 -14 -15
-		mu 0 4 11 12 13 14
-		f 4 6 2 3 4
-		mu 0 4 9 0 1 10
-		f 4 -6 10 11 -8
-		mu 0 4 7 8 13 12
-		f 4 0 16 -18 -16
-		mu 0 4 2 3 16 15
-		f 4 5 18 -20 -17
-		mu 0 4 3 5 17 16
-		f 4 -2 20 21 -19
-		mu 0 4 5 4 18 17
-		f 4 -5 15 22 -21
-		mu 0 4 4 2 15 18;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "boat_main1" -p "|detailed_models|boat";
 	rename -uid "817539C6-4645-EA66-A198-3581ABB8C49D";
 	setAttr ".rp" -type "double3" -1.8183655738830566 2.2803082466125488 0.30594623088836659 ;
@@ -52795,6 +52723,335 @@ createNode mesh -n "polySurfaceShape29" -p "wood_floor";
 		mu 0 4 26 16 17 27
 		f 4 48 31 -34 -46
 		mu 0 4 24 26 27 25;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "boat_seat" -p "|detailed_models|boat";
+	rename -uid "E0AE7D65-4374-9CE5-367D-B88B0E0E0FB0";
+createNode transform -n "boat_seat_cusion" -p "|detailed_models|boat|boat_seat";
+	rename -uid "B092B046-49CD-B604-0310-98844F4893EE";
+	setAttr ".t" -type "double3" 0.057726811024061409 0.022099220993539115 -0.05626202440748429 ;
+	setAttr ".s" -type "double3" 1.020230107126767 1.020230107126767 1.020230107126767 ;
+	setAttr ".rp" -type "double3" -2.2243247543861102 1.7821439859843053 2.5379463961538558 ;
+	setAttr ".sp" -type "double3" -2.1802186965942383 1.7468059151903454 2.487621545791626 ;
+	setAttr ".spt" -type "double3" -0.044106057791828121 0.035338070793947046 0.050324850362231222 ;
+createNode mesh -n "boat_seat_cusionShape" -p "boat_seat_cusion";
+	rename -uid "4898F906-4CFE-A5FD-455B-279D8AAC9173";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.37469708919525146 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 239 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[1]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[2]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[3]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[4]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[8]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[9]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[10]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[11]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[12]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[17]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[18]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[19]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[20]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[21]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[22]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[23]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[24]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[25]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[26]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[27]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[28]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[29]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[30]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[31]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[32]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[33]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[34]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[35]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[36]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[37]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[38]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[39]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[40]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[41]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[42]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[43]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[44]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[45]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[46]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[47]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[48]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[49]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[55]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[56]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[57]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[58]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[59]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[70]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[75]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[79]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[80]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[81]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[82]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[83]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[91]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[92]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[93]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[94]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[95]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[104]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[105]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[106]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[107]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[108]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[109]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[110]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[111]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[112]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[113]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[114]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[115]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[116]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[117]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[118]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[119]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[120]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[121]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[122]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[123]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[124]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[125]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[126]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[127]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[128]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[129]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[130]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[131]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[132]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[133]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[134]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[135]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[136]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[137]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[138]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[139]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[140]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[141]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[142]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[143]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[144]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[145]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[146]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[147]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[148]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[149]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[150]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[158]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[159]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[160]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[161]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[162]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[163]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[164]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[165]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[166]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[167]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[168]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[169]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[170]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[171]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[172]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[173]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[174]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[175]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[176]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[177]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[178]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[179]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[180]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[181]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[182]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[183]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[184]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[185]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[186]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[187]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[188]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[189]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[190]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[191]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[192]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[193]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[194]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[195]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[200]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[201]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[202]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[203]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[204]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[205]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[206]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[207]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[208]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[209]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[210]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[211]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[219]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[220]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[221]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[222]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[223]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[224]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[232]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[233]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[234]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[235]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[236]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[241]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[253]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[254]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[255]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[256]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[257]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[258]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[259]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[260]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[261]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[262]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[263]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[264]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[265]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[266]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[267]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[268]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[292]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[293]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[294]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[295]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[296]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[297]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[298]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[299]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[300]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[301]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[302]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[303]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[304]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[305]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[306]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[307]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[308]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[309]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[310]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[311]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[312]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[320]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[321]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[322]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[323]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[324]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[325]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[326]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[327]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[328]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[329]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[330]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[331]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[332]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[333]" -type "float3" 0 0.065629646 0 ;
+	setAttr ".pt[348]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[349]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[350]" -type "float3" 0 -0.16520339 0 ;
+	setAttr ".pt[351]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[352]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[353]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[354]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[355]" -type "float3" 0 -0.17947121 0 ;
+	setAttr ".pt[356]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[357]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[358]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[359]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[360]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[361]" -type "float3" -6.9141388e-06 -0.17371196 -5.7220459e-06 ;
+	setAttr ".pt[362]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[363]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[364]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[365]" -type "float3" 0 -0.16520341 0 ;
+	setAttr ".pt[366]" -type "float3" 0 -0.16520341 0 ;
+createNode mesh -n "polySurfaceShape30" -p "boat_seat_cusion";
+	rename -uid "F078CED0-4C00-AC95-9383-4F9F8A288D65";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "f[2]" "f[7:10]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 2 "f[4]" "f[6]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.75 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 19 ".uvst[0].uvsp[0:18]" -type "float2" 0.375 0 0.375 0.25
+		 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.875 0 0.875 0.25 0.125 0 0.125
+		 0.25 0.625 0 0.875 0 0.875 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.625 0.75 0.375 0.75;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 14 ".pt[0:13]" -type "float3"  -2.3175683 2.4108171 2.6782296 
+		-2.3175683 1.9592148 2.6782296 -2.3535099 1.9592131 3.0035386 -2.6669242 1.9592131 
+		2.9876215 -2.3535099 2.4108164 3.0035386 -2.6669242 2.4108164 2.9876215 -3.0080163 
+		2.4108176 2.9876215 -3.0080163 2.410816 2.6782296 -3.0080163 1.9592134 2.9876215 
+		-3.0080163 1.9592129 2.6782296 -2.3802371 1.9592142 3.8111386 -2.7196379 1.9592142 
+		3.8111386 -2.7196379 2.4108174 3.8111386 -2.3802371 2.4108174 3.8111386;
+	setAttr -s 14 ".vt[0:13]"  -0.5 -0.49999905 0.50000024 -0.5 0.11493972 0.50000024
+		 -0.5 0.11493972 -0.5 0.50000024 0.11493972 -0.5 -0.5 -0.49999905 -0.5 0.50000024 -0.49999905 -0.5
+		 1.45763385 -0.49999905 -0.5 1.45763385 -0.49999905 0.50000024 1.45763385 0.11493972 -0.5
+		 1.45763385 0.11493972 0.50000024 -0.5 0.11493972 -2.36219263 0.50000024 0.11493972 -2.36219263
+		 0.50000024 -0.49999905 -2.36219263 -0.5 -0.49999905 -2.36219263;
+	setAttr -s 23 ".ed[0:22]"  2 3 0 4 5 0 0 1 0 1 2 0 2 4 0 3 5 0 4 0 0
+		 5 6 0 0 7 0 6 7 0 3 8 0 8 6 0 1 9 0 9 8 0 7 9 0 2 10 0 3 11 0 10 11 0 5 12 0 11 12 0
+		 4 13 0 13 12 0 10 13 0;
+	setAttr -s 11 -ch 46 ".fc[0:10]" -type "polyFaces" 
+		f 4 -3 8 14 -13
+		mu 0 4 1 0 11 14
+		f 5 -1 -4 12 13 -11
+		mu 0 5 3 2 1 14 13
+		f 4 17 19 -22 -23
+		mu 0 4 15 16 17 18
+		f 5 -7 1 7 9 -9
+		mu 0 5 6 4 7 12 11
+		f 4 -10 -12 -14 -15
+		mu 0 4 11 12 13 14
+		f 4 6 2 3 4
+		mu 0 4 9 0 1 10
+		f 4 -6 10 11 -8
+		mu 0 4 7 8 13 12
+		f 4 0 16 -18 -16
+		mu 0 4 2 3 16 15
+		f 4 5 18 -20 -17
+		mu 0 4 3 5 17 16
+		f 4 -2 20 21 -19
+		mu 0 4 5 4 18 17
+		f 4 -5 15 22 -21
+		mu 0 4 4 2 15 18;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
@@ -66383,42 +66640,6 @@ createNode mesh -n "waterShape" -p "|detailed_models|water";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube1";
-	rename -uid "B0A149AE-44E3-48E1-E16E-C2ACE61F13D2";
-createNode mesh -n "pCubeShape1" -p "pCube1";
-	rename -uid "A92C725B-4A6F-C1C1-3CC5-8CA6053B6671";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube2";
-	rename -uid "7111C275-4A76-CA3F-FE13-D38F66EAACAD";
-createNode mesh -n "pCubeShape2" -p "pCube2";
-	rename -uid "A1FC5989-4299-B2F0-CE5A-64A68B85117F";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pSuperShape1";
-	rename -uid "7CF495F0-4037-43C0-DE31-FBBF04F0033F";
-createNode mesh -n "pSuperShapeShape1" -p "pSuperShape1";
-	rename -uid "D09709A4-4DE7-D954-8F54-60814861D86C";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "4EEEEAB3-4D0E-31D9-4E3C-58A256DEDFEA";
 	setAttr -s 17 ".lnk";
@@ -66469,7 +66690,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
 		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n"
-		+ "            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 1\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n"
+		+ "            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n"
 		+ "            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1484\n            -height 1089\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
 		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
@@ -66500,8 +66721,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n"
 		+ "            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n"
 		+ "\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 1\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1484\\n    -height 1089\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 1\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1484\\n    -height 1089\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1484\\n    -height 1089\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1484\\n    -height 1089\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -66513,7 +66734,7 @@ createNode blinn -n "blinn1";
 createNode shadingEngine -n "blinn1SG";
 	rename -uid "686EAAED-4A1D-A301-7741-F0A2EE70B8E3";
 	setAttr ".ihi" 0;
-	setAttr -s 11 ".dsm";
+	setAttr -s 10 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "0C1A10D8-4D8C-17ED-F32B-FD8A8111F157";
@@ -66523,7 +66744,7 @@ createNode lambert -n "lambert2";
 createNode shadingEngine -n "lambert2SG";
 	rename -uid "3E093496-4E01-2BB2-CE93-AE98361A9E56";
 	setAttr ".ihi" 0;
-	setAttr -s 24 ".dsm";
+	setAttr -s 25 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "B5890739-424C-A8C6-E19F-5289D63396A6";
@@ -66533,7 +66754,7 @@ createNode lambert -n "lambert3";
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "E22F4372-4F66-195C-0565-CBAFC769431B";
 	setAttr ".ihi" 0;
-	setAttr -s 5 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "7D364B07-4D24-649F-5313-3F986D4E1A90";
@@ -72125,12 +72346,6 @@ createNode polySplit -n "polySplit94";
 	setAttr ".d[0]"  -2147483573;
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
-createNode polyCube -n "polyCube1";
-	rename -uid "8E127FB0-4637-EEB2-1998-5685EEBA6A7F";
-	setAttr ".cuv" 4;
-createNode polyCube -n "polyCube2";
-	rename -uid "E1153218-4CB6-3E23-F858-4398DD2068AC";
-	setAttr ".cuv" 4;
 createNode polyExtrudeFace -n "polyExtrudeFace8";
 	rename -uid "3E725AFF-4FD1-AEE9-C677-6DB6EECEF2B4";
 	setAttr ".ics" -type "componentList" 1 "f[0:19]";
@@ -72200,13 +72415,132 @@ createNode polyTweak -n "polyTweak63";
 		 0 0 -0.047384806 0 0 -0.047384806 0 0 -0.047384806 0 0 -0.047384806 0 0 -0.047384806
 		 0 0 -0.047384806 0 0 -0.047384806 0 0 -0.047384806 0 0 -0.047384806 0 0 -0.047384806
 		 0 0 -0.047384806 0 0 -0.047384806 0;
-createNode polySuperShape -n "polySuperShape1";
-	rename -uid "D6D7F994-49A2-2C0A-270F-93ADA2C911EF";
+createNode polySplit -n "polySplit95";
+	rename -uid "6170C6B2-4458-BA8D-F811-6088B8A69866";
+	setAttr -s 2 ".e[0:1]"  0.5 0.5;
+	setAttr -s 2 ".d[0:1]"  -2147483639 -2147483635;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit96";
+	rename -uid "7AAB7A49-4619-F1B0-A306-458CE6B60830";
+	setAttr -s 4 ".e[0:3]"  0.5 0.5 0.5 0.5;
+	setAttr -s 4 ".d[0:3]"  -2147483648 -2147483631 -2147483627 -2147483647;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit97";
+	rename -uid "020D1632-464D-FB17-8EE6-CAA13E9AEEF9";
+	setAttr -s 2 ".e[0:1]"  0.5 0.5;
+	setAttr -s 2 ".d[0:1]"  -2147483640 -2147483636;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit98";
+	rename -uid "3E68590E-47CD-514B-2839-E5A73BBA0FA3";
+	setAttr -s 4 ".e[0:3]"  1 0 1 0.5;
+	setAttr -s 4 ".d[0:3]"  -2147483636 -2147483622 -2147483636 -2147483638;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit99";
+	rename -uid "CE53A678-4977-6E77-B515-84925E5DB04D";
+	setAttr -s 4 ".e[0:3]"  0.5 0.498606 0.495765 1;
+	setAttr -s 4 ".d[0:3]"  -2147483645 -2147483611 -2147483610 -2147483635;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit100";
+	rename -uid "4F8FA438-427E-BB02-44FB-8EB7A39DAD6A";
+	setAttr -s 3 ".e[0:2]"  0.5 0.5 0.5;
+	setAttr -s 3 ".d[0:2]"  -2147483633 -2147483618 -2147483632;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit101";
+	rename -uid "A0784482-4951-87B2-265F-D3AE5D585853";
+	setAttr -s 2 ".e[0:1]"  0 0.5;
+	setAttr -s 2 ".d[0:1]"  -2147483601 -2147483630;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit102";
+	rename -uid "F4E27A9C-4DD4-7BFC-227D-30ACCD55B744";
+	setAttr -s 2 ".e[0:1]"  1 0.5;
+	setAttr -s 2 ".d[0:1]"  -2147483638 -2147483641;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit103";
+	rename -uid "5B834BAC-44FB-8BC9-9D5F-FAA06E9BB2AB";
+	setAttr -s 2 ".e[0:1]"  1 0.5;
+	setAttr -s 2 ".d[0:1]"  -2147483633 -2147483628;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit104";
+	rename -uid "488E578A-46D0-F5F5-526A-FEADC72E409E";
+	setAttr -s 3 ".e[0:2]"  0 0.5 1;
+	setAttr -s 3 ".d[0:2]"  -2147483598 -2147483616 -2147483628;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit105";
+	rename -uid "FBE60A91-4251-2364-E3E1-B9ADBEF0DA4D";
+	setAttr -s 3 ".e[0:2]"  0 0.52491599 0;
+	setAttr -s 3 ".d[0:2]"  -2147483638 -2147483605 -2147483611;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak64";
+	rename -uid "076836E2-4947-74D5-83A8-02ABEA8BC691";
+	setAttr ".uopa" yes;
+	setAttr -s 31 ".tk";
+	setAttr ".tk[2]" -type "float3" 0 0.00062434777 0 ;
+	setAttr ".tk[3]" -type "float3" 0 0.00075497245 0 ;
+	setAttr ".tk[4]" -type "float3" 0 4.8470189e-05 0 ;
+	setAttr ".tk[5]" -type "float3" 0 4.8470189e-05 0 ;
+	setAttr ".tk[14]" -type "float3" 0 -9.3132257e-10 0 ;
+	setAttr ".tk[16]" -type "float3" 0 0.015403355 0 ;
+	setAttr ".tk[19]" -type "float3" 0 0.0097018117 0 ;
+	setAttr ".tk[21]" -type "float3" 0 0.00020725725 0 ;
+	setAttr ".tk[22]" -type "float3" 0 3.8393591e-05 0 ;
+	setAttr ".tk[24]" -type "float3" 0 0.023230636 0 ;
+	setAttr ".tk[25]" -type "float3" 0 0.028580049 0 ;
+	setAttr ".tk[26]" -type "float3" 0 0.0013400292 0 ;
+	setAttr ".tk[27]" -type "float3" 0 0.025922311 0 ;
+	setAttr ".tk[28]" -type "float3" 0 0.0013400296 0 ;
+	setAttr ".tk[29]" -type "float3" 0 0.00016540503 0 ;
+	setAttr ".tk[30]" -type "float3" 0 9.3132257e-10 0 ;
+	setAttr ".tk[31]" -type "float3" 0 0.00016540456 0 ;
+	setAttr ".tk[32]" -type "float3" 0 0.016415659 0 ;
+createNode polySplit -n "polySplit106";
+	rename -uid "983A5BE6-409C-3F30-7204-53A881FCE1CE";
+	setAttr -s 2 ".e[0:1]"  0 0;
+	setAttr -s 2 ".d[0:1]"  -2147483615 -2147483641;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyBevel3 -n "polyBevel34";
+	rename -uid "0ACDC08F-462D-837C-29B4-8DA80C01BDE2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 10 "e[2:3]" "e[5:24]" "e[27:28]" "e[33:36]" "e[39]" "e[45]" "e[47]" "e[50]" "e[52]" "e[54]";
+	setAttr ".ix" -type "matrix" 0 0 -1.020230107126767 0 0 1.020230107126767 0 0 1.020230107126767 0 0 0
+		 -0.05626202440748429 -0.039402648173028298 -0.057726811024061853 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.49999999999999994;
+	setAttr ".sg" 4;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyExtrudeFace -n "polyExtrudeFace11";
+	rename -uid "981C822D-40B8-6109-520D-C593647F74F5";
+	setAttr ".ics" -type "componentList" 5 "f[96]" "f[101]" "f[106]" "f[117:118]" "f[120]";
+	setAttr ".ix" -type "matrix" 0 0 -1.020230107126767 0 0 1.020230107126767 0 0 1.020230107126767 0 0 0
+		 -0.05626202440748429 -0.039402648173028298 -0.057726811024061853 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 2.3052716 1.9184445 2.2018733 ;
+	setAttr ".rs" 61669;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 1.462925999206111 1.9100701688348602 1.5649494146839718 ;
+	setAttr ".cbx" -type "double3" 3.1476172114940835 1.9268188270762088 2.8387974219251624 ;
+	setAttr ".raf" no;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "9ADFF57C-49F6-B153-D275-259FFF8EDE70";
+	rename -uid "454812C4-487A-13A0-D862-7CBD9B750696";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -376.30024206345809 -735.07171578938915 ;
-	setAttr ".tgi[0].vh" -type "double2" 1076.4706974059714 196.79762091412761 ;
+	setAttr ".tgi[0].vl" -type "double2" -376.30024206345809 -737.12655445907706 ;
+	setAttr ".tgi[0].vh" -type "double2" 1078.5255360756594 196.79762091412761 ;
 	setAttr -s 29 ".tgi[0].ni";
 	setAttr ".tgi[0].ni[0].x" 364.28570556640625;
 	setAttr ".tgi[0].ni[0].y" -97.142860412597656;
@@ -72362,7 +72696,7 @@ select -ne :initialShadingGroup;
 	setAttr -k on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 11 ".dsm";
+	setAttr -s 7 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -k on ".an";
 	setAttr -k on ".il";
@@ -72650,11 +72984,9 @@ connectAttr "polyTorus4.out" "bumper_loopShape.i";
 connectAttr "polyDelEdge27.out" "|detailed_models|boat|bumper|bumper|bumperShape.i"
 		;
 connectAttr "polyExtrudeFace10.out" "wood_floorShape.i";
+connectAttr "polyExtrudeFace11.out" "boat_seat_cusionShape.i";
 connectAttr "polyBevel10.out" "|detailed_models|ladder|pDisc2|pDiscShape2.i";
 connectAttr "polyBevel9.out" "|detailed_models|ladder|pDisc3|pDiscShape3.i";
-connectAttr "polyCube1.out" "pCubeShape1.i";
-connectAttr "polyCube2.out" "pCubeShape2.i";
-connectAttr "polySuperShape1.output" "pSuperShapeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -72718,7 +73050,6 @@ connectAttr "|detailed_models|boat|back_thing_bottom|back_thing_bottomShape.iog"
 		 -na;
 connectAttr "|detailed_models|boat|boat_main1|boat_main1Shape.iog" "blinn1SG.dsm"
 		 -na;
-connectAttr "wood_floorShape.iog" "blinn1SG.dsm" -na;
 connectAttr "blinn1SG.msg" "materialInfo1.sg";
 connectAttr "blinn1.msg" "materialInfo1.m";
 connectAttr "lambert2.oc" "lambert2SG.ss";
@@ -72752,17 +73083,16 @@ connectAttr "deck_piece12Shape.iog" "lambert2SG.dsm" -na;
 connectAttr "deck_piece13Shape.iog" "lambert2SG.dsm" -na;
 connectAttr "deck_piece14Shape.iog" "lambert2SG.dsm" -na;
 connectAttr "deck_piece15Shape.iog" "lambert2SG.dsm" -na;
+connectAttr "wood_floorShape.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo2.sg";
 connectAttr "lambert2.msg" "materialInfo2.m";
 connectAttr "lambert3.oc" "lambert3SG.ss";
 connectAttr "|white_boxing|sea_floor|sea_floorShape.iog" "lambert3SG.dsm" -na;
-connectAttr "|white_boxing|boat|boat_seat|boat_seatShape.iog" "lambert3SG.dsm" -na
-		;
+connectAttr "boat_seatShape.iog" "lambert3SG.dsm" -na;
 connectAttr "|detailed_models|sea_floor|sea_floorShape.iog" "lambert3SG.dsm" -na
 		;
-connectAttr "|detailed_models|boat|boat_seat|boat_seatShape.iog" "lambert3SG.dsm"
-		 -na;
 connectAttr "lil_window_thing_maybe_gas_pumpShape.iog" "lambert3SG.dsm" -na;
+connectAttr "boat_seat_cusionShape.iog" "lambert3SG.dsm" -na;
 connectAttr "lambert3SG.msg" "materialInfo3.sg";
 connectAttr "lambert3.msg" "materialInfo3.m";
 connectAttr "blinn2.oc" "blinn2SG.ss";
@@ -73661,6 +73991,23 @@ connectAttr "polyExtrudeFace8.out" "polyTweak62.ip";
 connectAttr "polyTweak63.out" "polyExtrudeFace10.ip";
 connectAttr "wood_floorShape.wm" "polyExtrudeFace10.mp";
 connectAttr "polyExtrudeFace9.out" "polyTweak63.ip";
+connectAttr "polySurfaceShape30.o" "polySplit95.ip";
+connectAttr "polySplit95.out" "polySplit96.ip";
+connectAttr "polySplit96.out" "polySplit97.ip";
+connectAttr "polySplit97.out" "polySplit98.ip";
+connectAttr "polySplit98.out" "polySplit99.ip";
+connectAttr "polySplit99.out" "polySplit100.ip";
+connectAttr "polySplit100.out" "polySplit101.ip";
+connectAttr "polySplit101.out" "polySplit102.ip";
+connectAttr "polySplit102.out" "polySplit103.ip";
+connectAttr "polySplit103.out" "polySplit104.ip";
+connectAttr "polyTweak64.out" "polySplit105.ip";
+connectAttr "polySplit104.out" "polyTweak64.ip";
+connectAttr "polySplit105.out" "polySplit106.ip";
+connectAttr "polySplit106.out" "polyBevel34.ip";
+connectAttr "boat_seat_cusionShape.wm" "polyBevel34.mp";
+connectAttr "polyBevel34.out" "polyExtrudeFace11.ip";
+connectAttr "boat_seat_cusionShape.wm" "polyExtrudeFace11.mp";
 connectAttr "blinn5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
 connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
@@ -73760,7 +74107,4 @@ connectAttr "|detailed_models|hut|pole|poleShape.iog" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pole2Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "bumper_loopShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pSuperShapeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of outdoor boat.0001.ma
